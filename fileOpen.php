@@ -34,10 +34,10 @@ class fileOpen
      */
     public function openFile()
     {
-        $this->file = fopen($this->filename, 'rb');
-
-        if ($this->file == false) {
-            exit("$filename can't be found in the specified directory! ");
+        if(!file_exists($this->filename)) {
+          die("File not found in the specified directory");
+        } else {
+          $this->file=fopen($this->filename,"r");
         }
         return $this->file;
     }
@@ -59,7 +59,7 @@ class fileOpen
     public function readFile()
     {
         $filetext = fread($this->file, self::getFileSize());
-        echo ("$filetext");
+        echo "$filetext";
         fclose($this->file);
     }
 }

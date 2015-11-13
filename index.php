@@ -1,8 +1,6 @@
 <?php
 
 require_once 'fileOpen.php';
-
-$fileopen = new fileOpen('test.txt');
+$fileopen = new fileOpen('tes.txt');
 $fileopen->openFile();
-$g = $fileopen->readFile();
-echo ($g);
+$fileopen->readFile();
