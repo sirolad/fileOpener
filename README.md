@@ -10,7 +10,7 @@ require_once 'fileOpen.php';
 
 $fileopen = new fileOpen('nameOfFile');
 $fileopen->openFile();
-$g = $fileopen->readFile();
+$fileopen->readFile();
 ```
 
 # Maintained
